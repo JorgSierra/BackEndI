@@ -1,8 +1,6 @@
 package com.dh.pizzeria.service;
 
 public abstract class Cocinero {
-
-
     public void hacerPizza(){
         prepararmasa();
         preCocinarMasa();

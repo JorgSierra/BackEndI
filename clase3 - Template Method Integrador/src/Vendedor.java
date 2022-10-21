@@ -1,4 +1,6 @@
 /*
+------------------------------------------ DESAFIO 1 ----------------------------------------
+
 Una empresa de ventas digitales nos pide modificar el modelado de su sistema.
 El sistema permite clasificar a los Vendedores en base al cumplimiento de ciertos requisitos.
 Se debe considerar los siguientes aspectos;
@@ -9,7 +11,8 @@ de ventas: novato, aprendiz, bueno, maestro.
 Los Vendedores suman puntos positivos según alcancen ciertos objetivos.
 
 El objetivo de los Empleados es conseguir Afiliados y hacer Ventas,
-conseguirán 10 puntos por cada nuevo afiliado, 5 puntos por cada venta que realicen y 5 puntos extra por cada anio de antiguedad que posean.
+conseguirán 10 puntos por cada nuevo afiliado, 5 puntos por cada venta que realicen
+y 5 puntos extra por cada anio de antiguedad que posean.
 
 El objetivo de los Afiliados es hacer ventas, conseguirán 15 puntos por cada
 nueva venta.
@@ -21,7 +24,10 @@ Entre 20 y 30 puntos = aprendices.
 Entre 31 y 40 puntos = buenos.
 Más de 40 puntos = maestros.
 
-Se nos solicita crear un tercer tipo de vendedor llamado Pasante, los Pasantes se categorizan según los siguientes aspectos:
+------------------------------------------ DESAFIO 2 ----------------------------------------
+
+Se nos solicita crear un tercer tipo de vendedor llamado Pasante, los Pasantes se categorizan
+según los siguientes aspectos:
 
 El objetivo de los Pasantes es hacer ventas, por cada venta reciben 5 puntos.
 
@@ -44,10 +50,8 @@ public abstract class Vendedor {
     protected int ventas = 0;
     protected int PUNTOS_POR_VENTA;
 
-    //validar que sea abstracto y lo implementa en las superclases
     public void vender(int cantVentas){
         this.ventas += cantVentas;
-       // System.out.println(this.nombre +" realizó "+cantVentas + " ventas.");
     }
 
     /*Metodo que calcula los puntos del Vendedor segun sus aspectos a considerar*/
@@ -55,16 +59,14 @@ public abstract class Vendedor {
 
     /*METODO TEMPLATE - recibe los puntos totales calculados desde la subclase
     y valida cada item para devolver la categoria*/
-
     public String mostrarCategoria(){
         int puntosDelVendedor = calcularPuntos();
-
-        return this.nombre + " tiene un total de " + puntosDelVendedor + " puntos y categoriza como "+getNombreCategoria() ;
+        String categoria = getNombreCategoria(puntosDelVendedor);
+        return this.nombre + " tiene un total de " + puntosDelVendedor + " puntos y categoriza como "+ categoria ;
     }
 
     /*Recibe los puntos, y devuelve una categorizacion*/
-    public String getNombreCategoria(){
-        int puntosVendedor = calcularPuntos();
+    public String getNombreCategoria(int puntosVendedor){
         if(puntosVendedor < 20){
             return "novato";
         }else if( puntosVendedor < 31){

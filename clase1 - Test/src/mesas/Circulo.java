@@ -17,7 +17,7 @@ public class Circulo implements Figura{
 
     @Override
     public String calcularArea() {
-        Double area=Math.PI*(radio*radio);
-        return "El área del círculo es de "+area+" unidades";
+        Double area = Math.PI*(radio * radio);
+        return "El área del círculo es de " +  area + " unidades";
     }
 }

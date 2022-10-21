@@ -7,6 +7,6 @@ public class Afiliado extends Vendedor{
 
     @Override
     public int calcularPuntos() {
-        return this.ventas * PUNTOS_POR_VENTA;
+        return super.ventas * super.PUNTOS_POR_VENTA;
     }
 }

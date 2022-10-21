@@ -17,7 +17,7 @@ public class Cuadrado implements Figura{
 
     @Override
     public String calcularArea() {
-        Double area=lado*lado;
-        return "El área del cuadrado es de "+area+" unidades";
+        Double area= lado * lado;
+        return "El área del cuadrado es de " + area + " unidades";
     }
 }

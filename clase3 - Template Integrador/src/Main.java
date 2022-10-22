@@ -13,6 +13,8 @@ public class Main {
         System.out.println(emp1.mostrarCategoria());
         System.out.println(emp2.mostrarCategoria());
         System.out.println(afi1.mostrarCategoria());
+        System.out.println(afi2.mostrarCategoria());
+        System.out.println(afi3.mostrarCategoria());
 
     }
 }

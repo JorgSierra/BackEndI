@@ -1,4 +1,4 @@
-package mesas;
+package mesa;
 
 public class MenuInfantil extends Menu{
     private Integer cantidadJuguetes;

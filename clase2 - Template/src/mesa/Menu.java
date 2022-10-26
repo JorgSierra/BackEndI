@@ -1,4 +1,4 @@
-package mesas;
+package mesa;
 
 public abstract class Menu {
     private Double precioBase;

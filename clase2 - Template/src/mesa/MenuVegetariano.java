@@ -1,4 +1,4 @@
-package mesas;
+package mesa;
 
 public class MenuVegetariano extends Menu{
     private Boolean conEspecias;

@@ -1,4 +1,4 @@
-package mesas;
+package mesa;
 
 public class MenuClasico extends Menu{
     public MenuClasico(Double precioBase) {

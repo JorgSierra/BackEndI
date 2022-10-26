@@ -11,6 +11,10 @@ public abstract class Menu {
         return precioBase;
     }
 
+    public void setPrecioBase(Double precioBase) {
+        this.precioBase = precioBase;
+    }
+
     public abstract void armarMenu();
     public abstract Double calcularPrecio();
 
@@ -26,5 +30,4 @@ public abstract class Menu {
         }
         return rta;
     }
-
 }

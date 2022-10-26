@@ -12,15 +12,7 @@ public class Usuario {
         return idUsuario;
     }
 
-    public void setIdUsuario(String idUsuario) {
-        this.idUsuario = idUsuario;
-    }
-
     public String getTipoUsuario() {
         return tipoUsuario;
-    }
-
-    public void setTipoUsuario(String tipoUsuario) {
-        this.tipoUsuario = tipoUsuario;
     }
 }

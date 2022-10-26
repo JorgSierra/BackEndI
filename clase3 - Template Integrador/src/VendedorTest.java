@@ -51,4 +51,27 @@ class VendedorTest {
 
         Assertions.assertEquals(rtaEsperada, rta);
     }
+
+    @Test
+    void pruebaPasanteNovato(){
+        Vendedor pasante = new Pasante("Juanito marcian"); pasante.vender(4);
+
+        String rtaEsperada = "Juanito marcian tiene un total de 20 puntos y categoriza como pasante novato";
+        String rta = pasante.mostrarCategoria();
+
+        Assertions.assertEquals(rtaEsperada, rta);
+    }
+
+    @Test
+    void pruebaPasanteExperimentado(){
+        Vendedor pasante = new Pasante("Juanito marcian"); pasante.vender(10);
+
+        String rtaEsperada = "Juanito marcian tiene un total de 50 puntos y categoriza como pasante experimentado";
+        String rta = pasante.mostrarCategoria();
+
+        Assertions.assertEquals(rtaEsperada, rta);
+    }
+
+
+
 }

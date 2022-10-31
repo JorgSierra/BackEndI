@@ -1,0 +1,56 @@
+#Comandos básicos
+
+1  - pwd    #Verificamos en el lugar donde estamos
+2  - cd     #Nos permite movernos entre directorios (cd , cd ..)
+3  - ls     #Verificar los archivos/directorios de donde estamos. 
+			#-a, --all no ignore elementos empezando con .
+			#-l, usar el formato de lista larga
+			#-h, --human-readable cambia el formato de el tamaño de los archivos
+			#-r, --reverse reversa el orden cuando se ordena
+			#-S, ordenar por tamaño, archivo mas grande primero
+			#-t, ordenar por tiempo, archivo mas nuevo primero
+4  - cp     #Copiar archivos/directorios 
+			#-r -R, copiar directorios de manera recursiva 
+5  - mv     #Mover un archivo. Cambiar nombre de un archivo.
+6  - rm     #Borrar un archivo/directorio 
+			#-r de manera recursiva 
+			#-f (WARNING) forzar el borrado para no decir yes a todo 
+7  - touch  #Crear un arhivo
+8  - mkdir  #Crear una carpeta
+9  - cat    #Imprimir por pantalla el stdout
+10 - sudo   #Elevar los privilegios sin loguearme al usuario root // cambiar de usuario
+
+#Comandos de verificación y de sistema
+
+1  - date     #Verificamos la fecha del sistema en el momento de ejecucion
+			  #watch date, para verla en tiempo real
+2  - cal      #Calendario en linux // sudo apt install ncal
+3  - history  #Historial de comandos // echo "" > ~/.bash_history && history -c
+4  - chmod    #Editar los permisos de un archivo // a g o "u-rwx" 
+5  - chown    #Nos permite cambiar el grupo de un archivo // user file
+6  - ps       #Visualizamos los proceso actuales // -e | top | htop (sudo apt install htop) 
+7  - kill     #Eliminar un proceso
+8  - df       #Verificamos detalles de espacio en nuestro sistema // du - h
+9  - man      #Documentación de comandos
+10 - ip a     #Verificamos ip de nuestro host
+
+#Comandos especiales
+
+1 - grep
+2 - awk
+3 - sed
+4 - tail
+5 - head
+6 - wc
+7 - jq
+
+#Manipulación de usuarios
+
+1 - adduser "Nombre del usuario" # /etc/passwd
+2 - userdel "Nombre del usuario" # -r 
+3 - addgroup "Nombre del grupo"  # /etc/group
+4 - usermod -aG "Nombre del grupo" "Nombre del usuario"
+
+#Verificar los servicios del sistema 
+
+1 - systemctl list-unit-files --type service --all

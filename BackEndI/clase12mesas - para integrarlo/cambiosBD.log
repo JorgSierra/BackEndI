@@ -1,0 +1,18 @@
+[2022-10-30 19:07:58] [ ERROR] [Empresa:41] Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.EMPLEADOS(ID) ( /* key:1 */ 1, 'Lia', 'Luz', 'Cancer', 55)"; SQL statement:
+INSERT INTO EMPLEADOS VALUES (1, 'Lia', 'Luz','Cancer', 55),(2, 'Lore', 'Ga','Tauro', 18),(1, 'Peter', 'Perez','Escorpio', 75) [23505-214]
+[2022-10-30 19:07:58] [ DEBUG] [Empresa:57] Empleada/o actualizada/o - ID: 1 - nombre: Lia - apellido: Luz - signo: Cancer - edad: 25
+[2022-10-30 19:07:58] [ INFO ] [Empresa:65] Empleada/o eliminada/o - ID: 3 - nombre: Peter - apellido: Perez - signo: Escorpio - edad: 75
+[2022-10-30 19:07:58] [ INFO ] [Empresa:74] Empleada/o eliminada/o - ID: 2 - nombre: Lore - apellido: Ga - signo: Tauro - edad: 18
+[2022-10-30 19:31:11] [ ERROR] [Empresa:42] Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.EMPLEADOS(ID) ( /* key:1 */ 1, 'Lia', 'Luz', 'Cancer', 55)"; SQL statement:
+INSERT INTO EMPLEADOS VALUES (1, 'Lia', 'Luz','Cancer', 55),(2, 'Lore', 'Ga','Tauro', 18),(1, 'Peter', 'Perez','Escorpio', 75) [23505-214]
+[2022-10-30 19:31:11] [ DEBUG] [Empresa:63] Empleada/o actualizada/o - ID: 1 - nombre: Lia - apellido: Luz - signo: Cancer - edad: 25
+[2022-10-30 19:31:11] [ DEBUG] [Empresa:63] Empleada/o actualizada/o - ID: 2 - nombre: Lore - apellido: Ga - signo: Tauro - edad: 18
+[2022-10-30 19:31:11] [ DEBUG] [Empresa:63] Empleada/o actualizada/o - ID: 3 - nombre: Peter - apellido: Perez - signo: Escorpio - edad: 75
+[2022-10-30 19:31:11] [ INFO ] [Empresa:71] Empleada/o eliminada/o - ID: 3 - nombre: Peter - apellido: Perez - signo: Escorpio - edad: 75
+[2022-10-30 19:31:11] [ INFO ] [Empresa:80] Empleada/o eliminada/o - ID: 2 - nombre: Lore - apellido: Ga - signo: Tauro - edad: 18
+[2022-10-30 19:36:09] [ ERROR] [Empresa:41] Unique index or primary key violation: "PRIMARY KEY ON PUBLIC.EMPLEADOS(ID) ( /* key:1 */ 1, 'Lia', 'Luz', 'Cancer', 55)"; SQL statement:
+INSERT INTO EMPLEADOS VALUES (1, 'Lia', 'Luz','Cancer', 55),(2, 'Lore', 'Ga','Tauro', 18),(1, 'Peter', 'Perez','Escorpio', 75) [23505-214]
+[2022-10-30 19:36:09] [ DEBUG] [Empresa:61] Empleada/o actualizada/o - ID: 1 - nombre: Lia - apellido: Luz - signo: Cancer - edad: 25
+[2022-10-30 19:36:09] [ INFO ] [Empresa:70] Empleada/o eliminada/o - ID: 3 - nombre: Peter - apellido: Perez - signo: Escorpio - edad: 75
+[2022-10-30 19:36:09] [ INFO ] [Empresa:80] Empleada/o eliminada/o - ID: 1 - nombre: Lia - apellido: Luz - signo: Cancer - edad: 25
+[2022-10-30 19:36:09] [ INFO ] [Empresa:80] Empleada/o eliminada/o - ID: 2 - nombre: Lore - apellido: Ga - signo: Tauro - edad: 18

@@ -1,0 +1,17 @@
+# configures the configuration version (we support older styles for
+# backwards compatibility). Please don't change it unless you kow what
+# you're doing.
+Vagrant.configure("2") do |config|  
+  config.vm.define "server" do |server|
+  config.vm.box = "debian/buster64"
+  server.vm.hostname = "server"
+  server.vm.network "public_network"
+  server.vm.provision "file", source: "index.html", destination: "index.html"
+  server.vm.provision "shell", inline: <<-SHELL
+	apt-get update
+	apt-get install -y apache2
+	sudo mv index.html /var/www/html/
+	SHELL
+
+  end
+end

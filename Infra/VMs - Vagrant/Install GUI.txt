@@ -1,0 +1,4 @@
+1 - inician la VM
+2 - acceden al root (su root)
+3 - apt-get install xorg
+4 - apt-get install gnome

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Prueba</h1>
+
+    <script>
+        function loadDataFromQueryString() {
+            let query = new URLSearchParams(location.search);
+            // Preguntamos si existe la clave 'name'
+            if (query.has('name')) {
+                // Obtenemos el valor de la clave 'name'
+                const name = query.get('name');
+                document.querySelector('h1').textContent =
+                    `Hola, ${name}. ¡Bienvenido@!`;
+            }
+        }
+
+        loadDataFromQueryString();
+    </script>
+</body>
+
+</html>

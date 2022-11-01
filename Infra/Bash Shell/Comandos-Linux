@@ -26,7 +26,7 @@
 			  #watch date, para verla en tiempo real
 2  - cal      #Calendario en linux // sudo apt install ncal
 3  - history  #Historial de comandos // echo "" > ~/.bash_history && history -c
-4  - chmod    #Editar los permisos de un archivo // a g o "u-rwx" 
+4  - chmod    #Editar los permisos de un archivo // a g o "u-rwx" <<chmode +x "filename">>
 5  - chown    #Nos permite cambiar el grupo de un archivo // user file
 6  - ps       #Visualizamos los proceso actuales // -e | top | htop (sudo apt install htop) 
 7  - kill     #Eliminar un proceso

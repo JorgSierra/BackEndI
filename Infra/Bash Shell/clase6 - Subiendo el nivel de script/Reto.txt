@@ -1,19 +1,29 @@
 # -------------------------------------------------------------- #
 EJERCICIO 1
 
-Crear un script que me permite verificar el estado del servicio "apache2.service" , en caso de que el servicio este "running" nos tiene que arrojar un mensaje de "Todo esta funcionando perfectamente" de lo contrario, tenemos que inicializarlo y verificamos que podemos ingresar al servidor a traves del navegador.
+Crear un script que me permite verificar el estado del servicio 
+"apache2.service" , en caso de que el servicio este "running" nos 
+tiene que arrojar un mensaje de "Todo esta funcionando perfectamente" 
+de lo contrario, tenemos que inicializarlo y verificamos que podemos 
+ingresar al servidor a traves del navegador.
 
 # -------------------------------------------------------------- #
 EJERCICIO 2
 
 Obtener del archivo "Personajes_lol" los siguientes datos:
 
-1 - Obtener los nombres de los personajes que empieza con "N" y distinguirlos entre "Melee (M) y Ranged (R)". Si alguno posee la caracteristica de "R/M" imprimirlo aparte.
+1 - Obtener los nombres de los personajes que empieza con "N" y 
+distinguirlos entre "Melee (M) y Ranged (R)". Si alguno posee la 
+caracteristica de "R/M" imprimirlo aparte.
 
-2 - Imprimir los primeros 7 personajes de la lista, y los ultimo 6 utilizando el comando "Shuf" anteriormente para mezclarlos.
+2 - Imprimir los primeros 7 personajes de la lista, y los ultimo 
+6 utilizando el comando "Shuf" anteriormente para mezclarlos.
 
-3 - Modificar todos los espacios por ", (coma)" del archivo y guardarlo en un nuevo que se llame "lista_personajes_csv"
+3 - Modificar todos los espacios por ", (coma)" del archivo y 
+guardarlo en un nuevo que se llame "lista_personajes_csv"
 
-4 - Contabilizar cuantos personajes hay en total, cuantos hay con la caracteristica "R/M", cuantos "MELEE (M)" y cuantos "RANGED (R)"
+4 - Contabilizar cuantos personajes hay en total, cuantos hay 
+con la caracteristica "R/M", cuantos "MELEE (M)" y cuantos 
+"RANGED (R)"
 
 # -------------------------------------------------------------- #

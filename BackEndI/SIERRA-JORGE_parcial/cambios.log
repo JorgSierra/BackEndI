@@ -1,0 +1,11 @@
+[2022-11-04 12:35:31] [ INFO ] [DB:30] Iniciando la creación de tabla
+[2022-11-04 12:35:31] [ WARN ] [DB:32] Tabla creada
+[2022-11-04 12:35:31] [ INFO ] [OdontologoDAOH2:22] Inicio de una operación de guardar odontologo
+[2022-11-04 12:35:31] [ WARN ] [OdontologoDAOH2:29] El odontologo fue insertado en la tabla
+[2022-11-04 12:35:31] [ INFO ] [OdontologoDAOH2:22] Inicio de una operación de guardar odontologo
+[2022-11-04 12:35:31] [ WARN ] [OdontologoDAOH2:29] El odontologo fue insertado en la tabla
+[2022-11-04 12:35:31] [ INFO ] [OdontologoDAOH2:22] Inicio de una operación de guardar odontologo
+[2022-11-04 12:35:31] [ WARN ] [OdontologoDAOH2:29] El odontologo fue insertado en la tabla
+[2022-11-04 12:35:31] [ INFO ] [OdontologoDAOH2:22] Inicio de una operación de guardar odontologo
+[2022-11-04 12:35:31] [ WARN ] [OdontologoDAOH2:29] El odontologo fue insertado en la tabla
+[2022-11-04 12:35:31] [ INFO ] [OdontologoDAOH2:52] Inicio de una operación de busqueda de todos los odontologos

@@ -28,7 +28,7 @@ export default function Post({info, updateTotal}) {
       <h3>{info.titulo}</h3>
       <p>{info.texto}</p>
       <button onClick={handleLiked}>&#128077;</button>
-      <h5>{postLikes <= 10 ? postLikes : "Más de 10 likes"}</h5>
+      <h5>{postLikes <= 10 ? "Likes " + postLikes : "Más de 10 likes"}</h5>
     </div>
   )
 }

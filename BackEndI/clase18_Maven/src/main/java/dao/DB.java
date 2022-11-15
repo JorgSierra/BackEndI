@@ -33,7 +33,7 @@ public class DB {
             ")";
     public static Connection getConnection() throws  Exception{
         Class.forName("org.h2.Driver");
-        return DriverManager.getConnection("jdbc:h2:~/SIERRA_JORGE","sa","sa");
+        return DriverManager.getConnection("jdbc:h2:./DB/SIERRA_JORGE","sa","sa");
     }
 
     public static void dropCreateTables(){
@@ -45,6 +45,7 @@ public class DB {
             stm.execute(SQL_DROP_CREATE_ODONTOLOGO);
             stm.execute(SQL_DROP_CREATE_PACIENTE);
             stm.execute(SQL_DROP_CREATE_DOMICILIO);
+            LOGGER.warn("Tables created");
         }
         catch (Exception e){
             LOGGER.error("Table creation failed: " + e.getMessage());
@@ -52,11 +53,9 @@ public class DB {
         finally {
             try {
                 con.close();
-            }
-            catch (Exception e){
+            } catch (Exception e) {
                 LOGGER.error("Close connection on table creation failed: " + e.getMessage());
             }
         }
-        LOGGER.warn("Tables created");
     }
 }

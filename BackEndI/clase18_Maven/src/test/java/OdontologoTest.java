@@ -9,7 +9,7 @@ import java.util.List;
 
 public class OdontologoTest {
     @Test
-    public void listOfOdontologo(){
+    public void listOf(){
         OdontologoService odonService = new OdontologoService();
         DB.dropCreateTables();
         Odontologo odon1 = new Odontologo("ASDF","Pepito","Peras");

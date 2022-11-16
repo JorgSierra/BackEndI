@@ -99,7 +99,7 @@ public class OdontologoDAOH2 implements Idao<Odontologo> {
                 con.close();
             }
             catch (Exception e){
-                LOGGER.error("Connection closing during odontologo saving failed: " + e.getMessage());
+                LOGGER.error("Connection closing during odontologo deletion failed: " + e.getMessage());
             }
         }
     }
@@ -151,14 +151,14 @@ public class OdontologoDAOH2 implements Idao<Odontologo> {
             LOGGER.info("Odontologo list found");
         }
         catch (Exception e){
-            LOGGER.error("Odontologo search failed " + e.getMessage());
+            LOGGER.error("Odontologo list search failed " + e.getMessage());
         }
         finally {
             try {
                 con.close();
             }
             catch (Exception e){
-                LOGGER.error("Connection closing during odontologo search failed: " + e.getMessage());
+                LOGGER.error("Connection closing during odontologo list search failed: " + e.getMessage());
             }
         }
         return odontologoList;

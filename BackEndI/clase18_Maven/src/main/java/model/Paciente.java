@@ -27,11 +27,11 @@ public class Paciente {
         this.domicilio = domicilio;
     }
 
-    public Integer getId() {
+    public Integer getID() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setID(Integer id) {
         this.id = id;
     }
 

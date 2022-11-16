@@ -65,7 +65,7 @@ public class DomicilioDAOH2 implements Idao<Domicilio>{
             LOGGER.warn("Domicilio with ID: " + domicilio.getID() + " was successfully updated!");
         }
         catch (Exception e){
-            LOGGER.error("Updating odontologo failed " + e.getMessage());
+            LOGGER.error("Updating domicilio failed " + e.getMessage());
         }
         finally {
             try{
@@ -97,7 +97,7 @@ public class DomicilioDAOH2 implements Idao<Domicilio>{
                 con.close();
             }
             catch (SQLException e){
-                LOGGER.error("Connection closing during domicilio saving failed: " + e.getMessage());
+                LOGGER.error("Connection closing during domicilio deletion failed: " + e.getMessage());
             }
         }
     }
@@ -149,14 +149,14 @@ public class DomicilioDAOH2 implements Idao<Domicilio>{
             LOGGER.info("Domicilio list found");
         }
         catch (Exception e){
-            LOGGER.error("Domicilio search failed " + e.getMessage());
+            LOGGER.error("Domicilio list search failed " + e.getMessage());
         }
         finally {
             try{
                 con.close();
             }
             catch (SQLException e){
-                LOGGER.error("Connection closing during odontologo search failed: " + e.getMessage());
+                LOGGER.error("Connection closing during domicilio list search failed: " + e.getMessage());
             }
         }
         return domicilios;

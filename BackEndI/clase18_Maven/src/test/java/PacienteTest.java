@@ -101,23 +101,43 @@ public class PacienteTest {
         Assertions.assertEquals(2, domicilioList.size());
     }
 
-    /*
-
     @Test
     public void updateTest(){
-        OdontologoService odonService = new OdontologoService();
         DB.dropCreateTables();
+        PacienteService patService = new PacienteService();
 
-        Odontologo odon1 = new Odontologo("ASDF","Pepito","Peras");
-        odonService.guardarOdontologo(odon1);
-        Odontologo result = odonService.buscarOdontologoID(1);
-        Assertions.assertEquals(result.getMatricula(), "ASDF");
+        Domicilio dom1 = new Domicilio("mañanitas", 10, "Horario", "Provinciano");
+        Domicilio dom2 = new Domicilio("nochesitas", 20, "Horario", "Provinciano");
 
-        odon1.setMatricula("QWERTY");
-        odonService.modificarOdontologo(odon1);
-        result = odonService.buscarOdontologoID(1);
-        Assertions.assertEquals(result.getMatricula(), "QWERTY");
-    } */
+        Paciente pat1 = new Paciente("Jorge", "Sierra", "1233456", LocalDate.of(2022,06,15), dom1);
+        patService.guardarPaciente(pat1);
+        Paciente result = patService.buscarPacienteID(1);
+        Assertions.assertEquals("Jorge", result.getNombre());
+        Assertions.assertEquals("Sierra", result.getApellido());
+        Assertions.assertEquals("1233456", result.getDni());
+        Assertions.assertEquals(LocalDate.of(2022,06,15), result.getFechaIngreso());
+        Assertions.assertEquals(dom1.getID(), result.getDomicilio().getID());
+        Assertions.assertEquals(dom1.getCalle(), result.getDomicilio().getCalle());
+        Assertions.assertEquals(dom1.getNumero(), result.getDomicilio().getNumero());
+        Assertions.assertEquals(dom1.getLocalidad(), result.getDomicilio().getLocalidad());
+        Assertions.assertEquals(dom1.getProvincia(), result.getDomicilio().getProvincia());
 
+        pat1.setNombre("Pablo");
+        pat1.setApellido("Palacios");
+        pat1.setDni("123456789");
+        pat1.setDomicilio(dom2);
+        patService.modificarPaciente(pat1);
+        result = patService.buscarPacienteID(1);
+        dom2.setID(result.getDomicilio().getID());
 
+        Assertions.assertEquals("Pablo", result.getNombre());
+        Assertions.assertEquals("Palacios", result.getApellido());
+        Assertions.assertEquals("123456789", result.getDni());
+        Assertions.assertEquals(LocalDate.of(2022,06,15), result.getFechaIngreso());
+        Assertions.assertEquals(dom2.getID(), result.getDomicilio().getID());
+        Assertions.assertEquals(dom2.getCalle(), result.getDomicilio().getCalle());
+        Assertions.assertEquals(dom2.getNumero(), result.getDomicilio().getNumero());
+        Assertions.assertEquals(dom2.getLocalidad(), result.getDomicilio().getLocalidad());
+        Assertions.assertEquals(dom2.getProvincia(), result.getDomicilio().getProvincia());
+    }
 }

@@ -55,14 +55,18 @@ public class PacienteDAOH2 implements Idao<Paciente>{
     public void update(Paciente paciente) {
         LOGGER.warn("Updating paciente ID: " + paciente.getID() + " ...");
         Connection con = null;
+        DomicilioDAOH2 domAux = new DomicilioDAOH2();
         try {
             con = DB.getConnection();
+            Integer domicilioID = searchID(paciente.getID()).getDomicilio().getID();
+            paciente.getDomicilio().setID(domicilioID);
+            domAux.update(paciente.getDomicilio());
             PreparedStatement pStm = con.prepareStatement(SQL_UPDATE);
             pStm.setString(1, paciente.getNombre());
             pStm.setString(2, paciente.getApellido());
             pStm.setString(3, paciente.getDni());
             pStm.setDate(4, Date.valueOf(paciente.getFechaIngreso()));
-            pStm.setInt(5, paciente.getDomicilio().getID());
+            pStm.setInt(5, domicilioID);
             pStm.setInt(6, paciente.getID());
             pStm.execute();
 

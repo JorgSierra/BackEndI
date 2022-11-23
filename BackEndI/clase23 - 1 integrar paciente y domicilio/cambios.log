@@ -1,0 +1,4 @@
+[2022-11-10 14:08:34] [ INFO ] [PacienteDAOH2:76] Iniciando la busqueda del paciente con email=prueba@gmail.com
+[2022-11-10 14:08:34] [ INFO ] [DomicilioDAOH2:57] Iniciando la busqueda de un domicilio con id=1
+[2022-11-22 15:17:53] [ INFO ] [PacienteDAOH2:76] Iniciando la busqueda del paciente con email=prueba@gmail.com
+[2022-11-22 15:17:53] [ INFO ] [DomicilioDAOH2:57] Iniciando la busqueda de un domicilio con id=1

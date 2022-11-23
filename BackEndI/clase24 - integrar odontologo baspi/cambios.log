@@ -1,0 +1,5 @@
+[2022-11-10 14:08:34] [ INFO ] [PacienteDAOH2:76] Iniciando la busqueda del paciente con email=prueba@gmail.com
+[2022-11-10 14:08:34] [ INFO ] [DomicilioDAOH2:57] Iniciando la busqueda de un domicilio con id=1
+[2022-11-11 18:55:51] [ INFO ] [OdontologoDAOH2:137] Iniciando el proceso de busqueda de todos los odontologos
+[2022-11-11 19:07:50] [ INFO ] [OdontologoDAOH2:137] Iniciando el proceso de busqueda de todos los odontologos
+[2022-11-11 19:08:32] [ INFO ] [OdontologoDAOH2:56] Iniciando el proceso de busqueda del odontologo con id igual= 1

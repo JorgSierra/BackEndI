@@ -8,8 +8,6 @@ public class Turno {
     private Odontologo odontologo;
     private LocalDate fecha;
 
-    public Turno(){}
-
     public Integer getId() { return id;}
 
     public void setId(Integer id) {

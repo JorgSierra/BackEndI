@@ -13,6 +13,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/turnos")
 public class TurnoController {
+    /*
     private TurnoService turnoService;
     @Autowired
     public TurnoController(TurnoService turnoService) {
@@ -52,9 +53,6 @@ public class TurnoController {
         PacienteService pacienteService = new PacienteService();
         OdontologoService odontologoService = new OdontologoService();
 
-       /* System.out.println("WTF is happening" + turno.toString());
-        return ResponseEntity.badRequest().body("WTF is happening" + turno.toString());*/
-
         if (turnoService.buscarTurnoID(turno.getId()) != null){
             if (pacienteService.buscarPacienteID(turno.getPaciente().getId()) != null && odontologoService.buscarOdontologoID(turno.getOdontologo().getId()) != null){
             turnoService.modificarTurno(turno);
@@ -82,4 +80,5 @@ public class TurnoController {
             // response = ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
         }
     }
+    */
 }

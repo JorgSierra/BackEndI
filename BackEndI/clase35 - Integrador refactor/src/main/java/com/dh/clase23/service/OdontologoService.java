@@ -1,14 +1,12 @@
 package com.dh.clase23.service;
 
-
-import com.dh.clase23.dao.Idao;
-import com.dh.clase23.dao.OdontologoDAOH2;
 import com.dh.clase23.model.Odontologo;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
 @Service
 public class OdontologoService {
+    /*
     private Idao<Odontologo> odontologoIDao;
     public OdontologoService() {
         this.odontologoIDao = new OdontologoDAOH2();
@@ -28,4 +26,6 @@ public class OdontologoService {
     public List<Odontologo> listarOdontologos(){
         return odontologoIDao.search();
     }
+
+     */
 }

@@ -17,21 +17,7 @@ public class PacienteController {
     public PacienteController(PacienteService pacienteService) {
         this.pacienteService = pacienteService;
     }
-    /*
-    // Controller
     @GetMapping
-    public String pacienteXEmail(Model model, @RequestParam("email") String email){
-        Paciente result = pacienteService.buscarPacienteEmail(email);
-        model.addAttribute("nombre", result.getNombre());
-        model.addAttribute("apellido", result.getApellido());
-        // Retorna un string que tiene que coincidir con el template
-        return "busquedaPaciente";
-    }*/
-    @GetMapping
-    public ResponseEntity<String> test(){
-        return ResponseEntity.ok("Testing paciente get!");
-    }
-    @GetMapping("/list")
     public ResponseEntity<List<Paciente>> pacienteListar(){
         return ResponseEntity.ok(pacienteService.listarPacientes());
     }
@@ -57,7 +43,7 @@ public class PacienteController {
     }
     @PutMapping
     public ResponseEntity<String> pacienteActualizar(@RequestBody Paciente paciente){
-        if (pacienteService.buscarPacienteID(paciente.getId()) != null){
+        if (pacienteService.buscarPacienteID(paciente.getId()).isPresent()){
             pacienteService.modificarPaciente(paciente);
             return ResponseEntity.ok("Se actualizó el paciente id = " + paciente.getId());
         }
@@ -67,7 +53,7 @@ public class PacienteController {
     }
     @DeleteMapping("/{id}")
     public ResponseEntity<String> pacienteEliminar(@PathVariable Long id){
-        if (pacienteService.buscarPacienteID(id) != null){
+        if (pacienteService.buscarPacienteID(id).isPresent()){
             pacienteService.eliminarPaciente(id);
             return ResponseEntity.ok("Se eliminó el paciente id = " + id);
         }

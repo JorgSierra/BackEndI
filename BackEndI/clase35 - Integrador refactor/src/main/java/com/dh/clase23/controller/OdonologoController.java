@@ -11,21 +11,13 @@ import java.util.List;
 @RestController
 @RequestMapping("/odontologos")
 public class OdonologoController {
+    /*
     private OdontologoService odontologoService;
 
     @Autowired
     public OdonologoController(OdontologoService odontologoService) {
         this.odontologoService = odontologoService;
     }
-
-    /*
-    // Controller
-    @GetMapping
-    public String odontologoXID(Model model, @RequestParam("id") Integer id){
-        Odontologo result = odontologoService.buscarOdontologoID(id);
-        model.addAttribute("matricula", result.getMatricula());
-        return "busquedaOdontologo";
-    }*/
     @GetMapping
     public ResponseEntity<String> test() {
         return ResponseEntity.ok("Testing odontologo get!");
@@ -60,7 +52,7 @@ public class OdonologoController {
 
     @PutMapping
     public ResponseEntity<String> odontologoActualizar(@RequestBody Odontologo odontologo) {
-        if (odontologoService.buscarOdontologoID(odontologo.getID()) != null) {
+        if (odontologoService.buscarOdontologoID(odontologo.getId()) != null) {
             odontologoService.modificarOdontologo(odontologo);
             return ResponseEntity.ok("Se actualizó el odontologo id = " + odontologo.getId());
         } else {
@@ -77,4 +69,6 @@ public class OdonologoController {
             return ResponseEntity.notFound().build();
         }
     }
+
+     */
 }

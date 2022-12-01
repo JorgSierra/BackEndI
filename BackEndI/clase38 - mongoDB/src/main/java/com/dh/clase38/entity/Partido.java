@@ -3,7 +3,7 @@ package com.dh.clase38.entity;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collation = "partidos")
+@Document(collection = "partidos")
 public class Partido {
     @Id
     private Integer id;

@@ -1,6 +1,6 @@
 package com.dh.clase23.controller;
 
-import com.dh.clase23.model.Turno;
+import com.dh.clase23.entity.Turno;
 import com.dh.clase23.service.OdontologoService;
 import com.dh.clase23.service.PacienteService;
 import com.dh.clase23.service.TurnoService;

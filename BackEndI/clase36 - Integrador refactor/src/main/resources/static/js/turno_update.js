@@ -1,25 +1,17 @@
 window.addEventListener('load', function () {
     // Seleccionar formulario para modificar
-    const formulario = document.querySelector('#update_paciente_form');
+    const formulario = document.querySelector('#update_turno_form');
     formulario.addEventListener('submit', (e) => {
         e.preventDefault();
         // Obtener y formatear datos del formulario
         const formData = {
-            id: document.querySelector('#paciente_id').value,
-            nombre: document.querySelector('#nombre').value,
-            apellido: document.querySelector('#apellido').value,
-            dni: document.querySelector('#dni').value,
-            fechaIngreso: document.querySelector('#fechaIngreso').value,
-            email: document.querySelector('#email').value,
-            domicilio : {
-                calle: document.querySelector('#calle').value,
-                numero: document.querySelector('#numero').value,
-                localidad: document.querySelector('#localidad').value,
-                provincia: document.querySelector('#provincia').value
-            }
+            id: document.querySelector('#turno_id').value,
+            odontologoId: document.querySelector('#odontologo_id').value,
+            pacienteId: document.querySelector('#paciente_id').value,
+            fecha: document.querySelector('#fecha').value,
         };
         // Ruta y configuracion de fetch
-        const url = '/pacientes';
+        const url = '/turnos';
         const settings = {
             method: 'PUT',
             headers: {
@@ -33,7 +25,7 @@ window.addEventListener('load', function () {
             if (response.status == 404){
                 alert("Las modificaciones no fueron ejecutadas");
             }
-            window.location.replace("/paciente_list.html");
+            window.location.replace("/turno_list.html");
         })
         
     })
@@ -41,28 +33,22 @@ window.addEventListener('load', function () {
 
 // Buscar la fila a editar y mostrar los datos actuales
 function findBy(id) {
-    const url = '/pacientes'+"/"+id;
+    const url = '/turnos'+"/"+id;
     const settings = {
         method: 'GET'
     }
     fetch(url,settings)
     .then(response => response.json())
     .then(data => {
-        let paciente = data;
-        document.querySelector('#paciente_id').value = paciente.id;
-        document.querySelector('#nombre').value = paciente.nombre;
-        document.querySelector('#apellido').value = paciente.apellido;
-        document.querySelector('#dni').value = paciente.dni;
-        document.querySelector('#fechaIngreso').value = paciente.fechaIngreso;
-        document.querySelector('#email').value = paciente.email;
-        document.querySelector('#calle').value = paciente.domicilio.calle;
-        document.querySelector('#numero').value = paciente.domicilio.numero;
-        document.querySelector('#localidad').value = paciente.domicilio.localidad;
-        document.querySelector('#provincia').value = paciente.domicilio.provincia;
+        let turno = data;
+        document.querySelector('#turno_id').value = turno.id;
+        document.querySelector('#paciente_id').value = turno.nombre;
+        document.querySelector('#odontologo_id').value = turno.apellido;
+        document.querySelector('#fecha').value = turno.dni;
 
         
         // Mostrar el formulario con los datos obtenidos en la busqueda
-        document.querySelector('#div_paciente_updating').style.display = "block";
+        document.querySelector('#div_turno_updating').style.display = "block";
         })
     .catch(error => {
         alert("Error: " + error);

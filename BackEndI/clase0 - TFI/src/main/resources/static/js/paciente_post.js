@@ -36,7 +36,7 @@ window.addEventListener('load', function () {
                 '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
                 document.querySelector('#response').innerHTML = successAlert;
                 document.querySelector('#response').style.display = "block";
-                //resetUploadForm();
+                resetUploadForm();
 
             })
             .catch(error => {
@@ -46,7 +46,7 @@ window.addEventListener('load', function () {
                 '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
                 document.querySelector('#response').innerHTML = errorAlert;
                 document.querySelector('#response').style.display = "block";
-                //resetUploadForm();
+                resetUploadForm();
             })
     });
 

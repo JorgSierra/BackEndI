@@ -1,6 +1,6 @@
 function deleteBy(id){
     // Obtener y formatear id
-    const url = '/pacientes/'+ id;
+    const url = '/turnos/'+ id;
     const settings = {
         method: 'DELETE'
     }

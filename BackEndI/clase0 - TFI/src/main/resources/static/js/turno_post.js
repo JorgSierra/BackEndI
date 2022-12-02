@@ -1,18 +1,16 @@
 window.addEventListener('load', function () {
     // Link formulario
-    const formulario = document.querySelector('#add_new_paciente');
+    const formulario = document.querySelector('#add_new_turno');
     formulario.addEventListener('submit', (e) => {
         e.preventDefault();
        // Obtener y formatear datos del formulario
         const formData = {
-            nombre: document.querySelector('#nombre').value,
-            apellido: document.querySelector('#apellido').value,
-            dni: document.querySelector('#dni').value,
-            fechaIngreso: document.querySelector('#fechaIngreso').value,
-            email: document.querySelector('#email').value,
+            odontologoId: document.querySelector('#id_odontologo').value,
+            pacienteId: document.querySelector('#id_paciente').value,
+            fecha: document.querySelector('#fechaTurno').value,
         };
         // Ruta y configuracion de fetch
-        const url = '/pacientes';
+        const url = '/turnos';
         const settings = {
             method: 'POST',
             headers: {
@@ -26,7 +24,7 @@ window.addEventListener('load', function () {
             .then(data => {
                  // Alerta de exito
                 let successAlert = '<div class="alert alert-success alert-dismissible fade show" role="alert">' +
-                '<div> Paciente agregado </div>' +
+                '<div> Turno agregado </div>' +
                 '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
                 document.querySelector('#response').innerHTML = successAlert;
                 document.querySelector('#response').style.display = "block";
@@ -46,14 +44,9 @@ window.addEventListener('load', function () {
 
 
     const resetUploadForm = () => {
-        document.querySelector('#nombre').value = "";
-        document.querySelector('#apellido').value = "";
-        document.querySelector('#fechaIngreso').value = "";
-        document.querySelector('#email').value = "";
-        document.querySelector('#calle').value = "";
-        document.querySelector('#numero').value = "";
-        document.querySelector('#localidad').value = "";
-        document.querySelector('#provincia').value = "";
+        document.querySelector('#id_paciente').value = "";
+        document.querySelector('#id_odontologo').value = "";
+        document.querySelector('#fechaTurno').value = "";
     }
 
 });

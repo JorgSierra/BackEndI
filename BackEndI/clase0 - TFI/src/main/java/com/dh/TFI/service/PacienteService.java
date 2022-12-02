@@ -1,7 +1,7 @@
-package com.dh.clase23.service;
+package com.dh.TFI.service;
 
-import com.dh.clase23.entity.Paciente;
-import com.dh.clase23.repository.PacienteRepository;
+import com.dh.TFI.entity.Paciente;
+import com.dh.TFI.repository.PacienteRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,7 +1,7 @@
-package com.dh.clase23.service;
+package com.dh.TFI.service;
 
-import com.dh.clase23.entity.Domicilio;
-import com.dh.clase23.entity.Paciente;
+import com.dh.TFI.entity.Domicilio;
+import com.dh.TFI.entity.Paciente;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;

@@ -1,11 +1,11 @@
-package com.dh.clase23.service;
+package com.dh.TFI.service;
 
 
-import com.dh.clase23.dto.TurnoDTO;
-import com.dh.clase23.entity.Odontologo;
-import com.dh.clase23.entity.Paciente;
-import com.dh.clase23.entity.Turno;
-import com.dh.clase23.repository.TurnoRepository;
+import com.dh.TFI.dto.TurnoDTO;
+import com.dh.TFI.entity.Odontologo;
+import com.dh.TFI.entity.Paciente;
+import com.dh.TFI.entity.Turno;
+import com.dh.TFI.repository.TurnoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

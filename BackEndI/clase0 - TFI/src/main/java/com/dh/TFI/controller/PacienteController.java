@@ -1,7 +1,7 @@
-package com.dh.clase23.controller;
+package com.dh.TFI.controller;
 
-import com.dh.clase23.entity.Paciente;
-import com.dh.clase23.service.PacienteService;
+import com.dh.TFI.entity.Paciente;
+import com.dh.TFI.service.PacienteService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

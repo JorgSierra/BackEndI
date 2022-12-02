@@ -1,6 +1,6 @@
-package com.dh.clase23.repository;
+package com.dh.TFI.repository;
 
-import com.dh.clase23.entity.Odontologo;
+import com.dh.TFI.entity.Odontologo;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 public interface OdontologoRepository extends JpaRepository<Odontologo, Long> {

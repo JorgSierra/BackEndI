@@ -1,4 +1,4 @@
-package com.dh.clase23.dto;
+package com.dh.TFI.dto;
 
 import java.time.LocalDate;
 

@@ -1,6 +1,6 @@
-package com.dh.clase23.repository;
+package com.dh.TFI.repository;
 
-import com.dh.clase23.entity.Paciente;
+import com.dh.TFI.entity.Paciente;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

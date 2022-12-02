@@ -1,7 +1,7 @@
-package com.dh.clase23.controller;
+package com.dh.TFI.controller;
 
-import com.dh.clase23.entity.Odontologo;
-import com.dh.clase23.service.OdontologoService;
+import com.dh.TFI.entity.Odontologo;
+import com.dh.TFI.service.OdontologoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

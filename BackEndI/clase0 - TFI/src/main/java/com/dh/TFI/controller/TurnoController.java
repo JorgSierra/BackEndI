@@ -1,9 +1,9 @@
-package com.dh.clase23.controller;
+package com.dh.TFI.controller;
 
-import com.dh.clase23.entity.Turno;
-import com.dh.clase23.service.OdontologoService;
-import com.dh.clase23.service.PacienteService;
-import com.dh.clase23.service.TurnoService;
+import com.dh.TFI.entity.Turno;
+import com.dh.TFI.service.OdontologoService;
+import com.dh.TFI.service.PacienteService;
+import com.dh.TFI.service.TurnoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

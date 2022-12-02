@@ -1,6 +1,6 @@
-package com.dh.clase23.entity;
+package com.dh.TFI.entity;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
 
 @Entity
 @Table(name = "DOMICILIO")

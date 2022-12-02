@@ -1,8 +1,8 @@
-package com.dh.clase23.service;
+package com.dh.TFI.service;
 
 
-import com.dh.clase23.entity.Turno;
-import com.dh.clase23.repository.TurnoRepository;
+import com.dh.TFI.entity.Turno;
+import com.dh.TFI.repository.TurnoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,6 +1,6 @@
-package com.dh.clase23.service;
+package com.dh.TFI.service;
 
-import com.dh.clase23.entity.Odontologo;
+import com.dh.TFI.entity.Odontologo;
 import org.junit.jupiter.api.MethodOrderer;
 import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
@@ -8,7 +8,6 @@ import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import java.time.LocalDate;
 import java.util.List;
 import java.util.Optional;
 

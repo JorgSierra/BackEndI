@@ -1,7 +1,7 @@
-package com.dh.TFI.service;
+package com.dh.clase23.service;
 
-import com.dh.TFI.entity.Odontologo;
-import com.dh.TFI.repository.OdontologoRepository;
+import com.dh.clase23.entity.Odontologo;
+import com.dh.clase23.repository.OdontologoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -15,8 +15,7 @@ public class OdontologoService {
     public OdontologoService(OdontologoRepository odontologoRepository) {
         this.odontologoRepository = odontologoRepository;
     }
-
-    public Odontologo guardarOdontologo(Odontologo odontologo){
+    public Odontologo guardarOdontologo (Odontologo odontologo){
         return odontologoRepository.save(odontologo);
     }
     public void modificarOdontologo (Odontologo odontologo){

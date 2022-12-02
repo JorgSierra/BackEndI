@@ -1,7 +1,9 @@
-package com.dh.TFI.entity;
+package com.dh.clase23.entity;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
+import java.util.Set;
 
 @Entity
 @Table(name = "ODONTOLOGO")
@@ -15,6 +17,9 @@ public class Odontologo {
     private String nombre;
     @Column
     private String apellido;
+    @OneToMany(mappedBy = "odontologo")
+    @JsonIgnore
+    private Set<Turno> turnos;
 
     public Odontologo(){}
 
@@ -61,5 +66,23 @@ public class Odontologo {
 
     public void setApellido(String apellido) {
         this.apellido = apellido;
+    }
+
+    public Set<Turno> getTurnos() {
+        return turnos;
+    }
+
+    public void setTurnos(Set<Turno> turnos) {
+        this.turnos = turnos;
+    }
+
+    @Override
+    public String toString() {
+        return "Odontologo{" +
+                "id=" + id +
+                ", matricula='" + matricula + '\'' +
+                ", nombre='" + nombre + '\'' +
+                ", apellido='" + apellido + '\'' +
+                '}';
     }
 }

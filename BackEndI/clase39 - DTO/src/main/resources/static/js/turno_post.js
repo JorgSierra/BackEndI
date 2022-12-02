@@ -1,17 +1,18 @@
 window.addEventListener('load', function () {
     // Link formulario
-    const formulario = document.querySelector('#add_new_odontologo');
+    const formulario = document.querySelector('#add_new_paciente');
     formulario.addEventListener('submit', (e) => {
         e.preventDefault();
        // Obtener y formatear datos del formulario
         const formData = {
-            matricula: document.querySelector('#matricula').value,
             nombre: document.querySelector('#nombre').value,
             apellido: document.querySelector('#apellido').value,
-
+            dni: document.querySelector('#dni').value,
+            fechaIngreso: document.querySelector('#fechaIngreso').value,
+            email: document.querySelector('#email').value,
         };
         // Ruta y configuracion de fetch
-        const url = '/odontologos';
+        const url = '/pacientes';
         const settings = {
             method: 'POST',
             headers: {
@@ -25,11 +26,11 @@ window.addEventListener('load', function () {
             .then(data => {
                  // Alerta de exito
                 let successAlert = '<div class="alert alert-success alert-dismissible fade show" role="alert">' +
-                '<div> Odontologo agregado </div>' +
+                '<div> Paciente agregado </div>' +
                 '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
                 document.querySelector('#response').innerHTML = successAlert;
                 document.querySelector('#response').style.display = "block";
-                resetUploadForm();
+                //resetUploadForm();
 
             })
             .catch(error => {
@@ -39,15 +40,20 @@ window.addEventListener('load', function () {
                 '<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
                 document.querySelector('#response').innerHTML = errorAlert;
                 document.querySelector('#response').style.display = "block";
-                resetUploadForm();
+                //resetUploadForm();
             })
     });
 
 
     const resetUploadForm = () => {
-        document.querySelector('#matricula').value = "";
         document.querySelector('#nombre').value = "";
         document.querySelector('#apellido').value = "";
+        document.querySelector('#fechaIngreso').value = "";
+        document.querySelector('#email').value = "";
+        document.querySelector('#calle').value = "";
+        document.querySelector('#numero').value = "";
+        document.querySelector('#localidad').value = "";
+        document.querySelector('#provincia').value = "";
     }
 
 });

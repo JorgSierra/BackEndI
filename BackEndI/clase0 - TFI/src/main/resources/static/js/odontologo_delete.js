@@ -6,13 +6,18 @@ function deleteBy(id){
     }
     fetch(url,settings)
     .then(response => {
-        if (response.status == 404){
-            alert("Error al eliminar");
-        }
-        else if (response.status == 200){
-            // Borrar la fila eliminada
-            let row_id = "#tr_" + id;
-            document.querySelector(row_id).remove();
+        switch (response.status) {
+            case 404:
+                alert("Error al eliminar");
+                break;
+            case 500:
+                alert("Primero elimine los turnos asociados");
+                break;
+            case 200:
+                // Borrar la fila eliminada
+                let row_id = "#tr_" + id;
+                document.querySelector(row_id).remove();
+                break;
         }
     })
 }

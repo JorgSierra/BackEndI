@@ -1,7 +1,8 @@
 package com.dh.TFI.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import jakarta.persistence.*;
+
+import javax.persistence.*;
 import java.util.Set;
 
 @Entity

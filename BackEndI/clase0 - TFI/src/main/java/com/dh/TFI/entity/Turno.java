@@ -1,6 +1,6 @@
 package com.dh.TFI.entity;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 import java.time.LocalDate;
 

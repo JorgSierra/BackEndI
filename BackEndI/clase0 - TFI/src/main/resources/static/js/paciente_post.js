@@ -54,6 +54,7 @@ window.addEventListener('load', function () {
     const resetUploadForm = () => {
         document.querySelector('#nombre').value = "";
         document.querySelector('#apellido').value = "";
+        document.querySelector('#dni').value = "";
         document.querySelector('#fechaIngreso').value = "";
         document.querySelector('#email').value = "";
         document.querySelector('#calle').value = "";

@@ -13,6 +13,7 @@ public class Turno {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    //referencedColumnName = "id"
     @ManyToOne
     @JoinColumn(name = "paciente_id")
     private Paciente paciente;

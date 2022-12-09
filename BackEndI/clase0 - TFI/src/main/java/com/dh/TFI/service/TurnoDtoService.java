@@ -45,8 +45,7 @@ public class TurnoDtoService {
             return turno2dto(result.get());
         }
         else {
-            LOGGER.error("El turno no existe en la DB ");
-            throw new ResourceNotFoundException("El turno buscado no existe en la DB");
+            throw new ResourceNotFoundException("[" + TurnoDtoService.class.getName() + "]" + " el turno buscado no existe en la DB");
         }
     }
     public TurnoDTO guardarTurno (TurnoDTO dto) throws BadRequestException, ResourceNotFoundException {
@@ -59,13 +58,12 @@ public class TurnoDtoService {
                 return turno2dto(result);
             }
             else{
-                LOGGER.error("El truno no pudo ser registrado");
-                throw new BadRequestException("El turno no pudo ser registrado");
+                throw new BadRequestException("[" + TurnoDtoService.class.getName() + "]" + " el turno no pudo ser registrado");
             }
         }
         else{
-            LOGGER.error("El odontologo/paciente que se quiere asignar a este turno no existe en la DB");
-            throw new ResourceNotFoundException("El odontologo/paciente que se quiere asignar a este turno no existe en la DB");
+            // Creo que nunca va a entrar aca por las excepciones de las comprobaciones del if
+            throw new ResourceNotFoundException("[" + TurnoDtoService.class.getName() + "]" + " el odontologo/paciente que se quiere asignar a este turno no existe en la DB");
         }
     }
     public void modificarTurno (TurnoDTO dto) throws BadRequestException, ResourceNotFoundException{
@@ -79,8 +77,8 @@ public class TurnoDtoService {
 
         }
         else {
-            LOGGER.error("El odontologo/paciente que se quiere asignar a este turno no existe en la DB");
-            throw new BadRequestException ("El odontologo/paciente que se quiere asignar a este turno no existe en la DB");
+            // Creo que nunca va a entrar aca por las excepciones de las comprobaciones del if
+            throw new BadRequestException ("[" + TurnoDtoService.class.getName() + "]" + " el odontologo/paciente que se quiere asignar a este turno no existe en la DB");
         }
     }
     public void eliminarTurno (Long id) throws ResourceNotFoundException{

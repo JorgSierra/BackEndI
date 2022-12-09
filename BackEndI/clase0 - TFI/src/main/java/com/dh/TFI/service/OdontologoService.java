@@ -31,8 +31,7 @@ public class OdontologoService {
             return result.get();
         }
         else{
-            LOGGER.error("El odontologo no existe en la DB ");
-            throw new ResourceNotFoundException("El odontologo no existe en la DB");
+            throw new ResourceNotFoundException("[" + OdontologoService.class.getName() + "]" + " el odontologo no existe en la DB");
         }
     }
     public Odontologo guardarOdontologo (Odontologo odontologo) throws BadRequestException{
@@ -43,8 +42,7 @@ public class OdontologoService {
             return result;
         }
         else{
-            LOGGER.error("El odontologo no pudo ser registrado");
-            throw new BadRequestException("El odontologo no pudo ser registrado");
+            throw new BadRequestException("[" + OdontologoService.class.getName() + "]" + " el odontologo no pudo ser registrado");
         }
     }
     public void modificarOdontologo (Odontologo odontologo) throws ResourceNotFoundException{

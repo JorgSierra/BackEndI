@@ -30,8 +30,7 @@ public class PacienteService {
             return result.get();
         }
         else{
-            LOGGER.error("El paciente no existe en la DB ");
-            throw new ResourceNotFoundException("El paciente no existe en la DB");
+            throw new ResourceNotFoundException("[" + PacienteService.class.getName() + "]" + " el paciente no existe en la DB");
         }
     }
     public Paciente guardarPaciente (Paciente paciente) throws BadRequestException{
@@ -42,8 +41,7 @@ public class PacienteService {
             return result;
         }
         else{
-            LOGGER.error("El paciente no pudo ser registrado");
-            throw new BadRequestException("El paciente no pudo ser registrado");
+            throw new BadRequestException("[" +PacienteService.class.getName() + "]" + " el paciente no pudo ser registrado");
         }
     }
     public void modificarPaciente (Paciente paciente) throws ResourceNotFoundException{

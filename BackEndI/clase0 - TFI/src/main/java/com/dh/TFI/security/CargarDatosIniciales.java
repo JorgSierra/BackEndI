@@ -25,5 +25,7 @@ public class CargarDatosIniciales implements ApplicationRunner {
         String passCifrada = encoder.encode("digital");
         Usuario usuario = new Usuario("Jorge", "jorgsierra", "jorge@correo.com", passCifrada, UsuarioRole.ROLE_USER);
         usuarioRepository.save(usuario);
+        usuario = new Usuario("Rodolfo", "baspi", "baspi@correo.com", passCifrada, UsuarioRole.ROLE_ADMIN);
+        usuarioRepository.save(usuario);
     }
 }

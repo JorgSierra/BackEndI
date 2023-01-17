@@ -1,0 +1,185 @@
+// Jorge Sierra
+
+// -----------------------------
+// --------- Punto 1 -----------
+// -----------------------------
+
+console.log("\n------ Punto 1: ");
+
+// Dado el siguiente arreglo de objetos:
+
+let paises = [
+    {
+      nombre: "Argentina",
+      continente: "Sudamerica",
+      clima: 'nublado'
+    },
+    {
+      nombre: "Brasil",
+      continente: "Sudamerica",
+      clima: 'soleado'
+    },
+    {
+      nombre: "Venezuela",
+      continente: "Sudamerica",
+      clima: 'soleado'
+    },
+    {
+      nombre: "Chile",
+      continente: "Sudamerica",
+      clima: 'lluvioso'
+    },
+    {
+      nombre: "Australia",
+      continente: "Oceania",
+      clima: 'soleado'
+    },
+    {
+      nombre: "Nueva Zelanda",
+      continente: "Oceania",
+      clima: 'lluvioso'
+    }
+];
+
+// Crear una función que reciba como parámetro un arreglo de objetos y un continente. La función deberá retornar un nuevo arreglo llamado ‘paisesSoleados’ que contenga sólo los objetos cuyos países sean del continente pasado por parámetro, y que dichos países tengan un clima soleado.
+
+function esSoleado(arr, continente){
+    let paisesSoleados = [];
+    for (let i = 0; i < arr.length; i++){ 
+        if(arr[i].continente == continente && arr[i].clima == "soleado"){
+            paisesSoleados.push(arr[i]);
+        }
+    }
+    return(paisesSoleados);
+}
+
+// TESTING
+
+let paisesSoleados = esSoleado(paises, "Oceania");
+console.log("Países soleados de Oceania:");
+console.log(paisesSoleados);
+console.log("\nPaíses soleados de Sudamerica:");
+paisesSoleados = esSoleado(paises, "Sudamerica");
+console.log(paisesSoleados);
+
+console.log("--------------");
+
+// -----------------------------
+// --------- Punto 2 -----------
+// -----------------------------
+
+console.log("\n------Punto 2:");
+
+// Dado el siguiente array de numeros:
+let numeros = [20, 6, 10, 3, 27, 1 , 522 , 100, 17, 53];
+
+// Crear una función llamada bubbleSort que reciba como parámetros un array y un booleano que represente el sentido de ordenamiento, la función deberá realizar un ordenamiento interno del array según el orden indicado:
+
+// “TRUE” de manera ascendente
+// “FALSE” de manera descendente
+
+function bubbleSort (arr, orderBy){
+    let aux;
+    if(orderBy){
+        // “TRUE” de manera ascendente
+        for(let i = 0; i < arr.length; i++){
+            for (let j = 0; j < arr.length; j++) {
+                if (arr[j] > arr[j + 1]){
+                    aux = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = aux;
+                }
+            }
+        }
+    }
+    else{
+        // “FALSE” de manera descendente
+        for(let i = 0; i < arr.length; i++){
+            for (let j = 0; j < arr.length; j++) {
+                if (arr[j] < arr[j + 1]){
+                    aux = arr[j];
+                    arr[j] = arr[j + 1];
+                    arr[j + 1] = aux;
+                }
+            }
+        }
+    }
+}
+
+//TEST
+
+console.log("Arreglo antes de ordenar:")
+console.log(numeros);
+bubbleSort(numeros, true);
+console.log("Arreglo luego de ordenar con true (ACS):")
+console.log(numeros);
+numeros = [20, 6, 10, 3, 27, 1 , 522 , 100, 17, 53];
+console.log("Arreglo antes de ordenar:")
+console.log(numeros);
+bubbleSort(numeros, false);
+console.log("Arreglo luego de ordenar con false (DESC):")
+console.log(numeros);
+
+console.log("--------------");
+
+// -----------------------------
+// --------- Punto 3 -----------
+// -----------------------------
+
+console.log("\n------Punto 3:");
+
+// Crear una matriz de 5 x 7
+// Manualmente
+let matrix = [[0, 1, 2, 3, 4, 5, 6], [0, 1, 2, 3, 4, 5, 6], [0, 1, 2, 3, 4, 5, 6], [0, 1, 2, 3, 4, 5, 6], [0, 1, 2, 3, 4, 5, 6]]
+console.log("\nCreada manualmente");
+console.table(matrix);
+
+function crearMatrizRand (m, n){
+    let matrix = [];
+    let rand;
+    for (let i = 0; i < m; i++) {
+        matrix[i] = [];
+        for (let j = 0; j < n; j++) {
+            rand = Math.round(Math.random() * 100);
+            matrix[i].push(rand);
+        }
+    }
+    return matrix;
+}
+console.log("\nCreada con funcion y valores random");
+let mat = crearMatrizRand(5, 7);
+console.table(mat);
+
+// Crear una función que reciba a la matriz creada por parámetro, y que sume todos los valores que sean pares y menores a 9. Retornar la suma.
+
+function sumaParesMenores9 (matrix){
+    let sum = 0;
+    for (let i = 0; i < matrix.length; i++) {
+        for (let j = 0; j < matrix[i].length; j++) {
+            if (matrix[i][j] % 2 == 0 && matrix[i][j] < 9){
+                sum += matrix[i][j];
+            }
+        }
+    }
+    return sum;
+}
+//TEST
+let total = sumaParesMenores9(matrix);
+console.log("\nSuma de pares y menores a 9 de matriz (manual)");
+console.log(total);
+
+// Crear una función que reciba a la matriz creada por parámetro, que recorra la fila 3 y modifique cada elemento por su negativo
+
+function modificarANegativoFila3 (matrix){
+    for (let i = 0; i < matrix[0].length; i++){
+        if (matrix[2][i] != 0){
+            matrix[2][i] *= -1;
+        }
+    }
+}
+//TEST
+console.log("\nMatriz antes de modificar fila 3:");
+console.table(matrix);
+modificarANegativoFila3(matrix);
+console.log("Matriz luego de modificar fila 3:");
+console.table(matrix);

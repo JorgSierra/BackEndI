@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+*{
+    font-family: 'Roboto', sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.card{
+    background-color: #f3f3f3;
+}
+.promocion{
+    font-size: 1.2rem;
+    font-weight: 400;
+    background-color: #D1891C;
+    padding: 10px;
+}
+section.navbar{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: #00669F;
+}
+.navbar h1{
+    margin: 0;
+    padding: 15px;
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: white;
+}
+main{
+    position: relative;
+}
+.cardContainer{
+    margin: 50px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.card{
+    width: 300px;
+    margin: 30px 15px;
+    position: relative;
+    box-shadow: 10px 10px 16px -4px rgba(0,0,0,0.52);
+}
+.card, .cover{
+    border-radius: 16px 16px 0 0;
+}
+.card h2{
+    font-size: 1.8rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: 65px;
+}
+.card p{
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 20px;
+    margin-top: 0;
+}
+.card button{
+    padding: 13px 22px;
+    border-width: 0;
+    background-color: #00669F;
+    color: white;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 30px;
+}
+.cover{
+    width: 100%;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 194px;
+}
+.avatar{
+    position: absolute;
+    width: 120px;
+    z-index: 2;
+    border-radius: 50%;
+    left: 50%;
+    top: 194px;
+    transform: translate(-50%, -50%);
+    box-shadow: 10px 10px 16px -4px rgba(0,0,0,0.52);
+}
+.card i{
+    position: absolute;
+    color: red;
+    font-size: 1.8rem;
+    z-index: 3;
+    top: 10px;
+    left: 10px;
+}
+footer{
+    background-color: #00669F;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    position: relative;
+}
+footer p{
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+    text-align: center;
+    padding: 1rem;
+}
+footer a{
+    position: absolute;
+    padding: 1rem;
+    right: 0;
+}
+footer a img{
+    height: 1.7rem;
+}
+.plus{
+    position: absolute;
+    color: white;
+    top: 50%;
+    right:30px;
+    background-color: #00669F;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(50%, -50%);
+}
+
+
+/*estilos para smartphones */
+
+@media only screen and (max-width: 767px){
+
+	footer{
+        flex-direction: column;
+    }
+    footer a{
+        position: static;
+    }
+
+}
+
+@media only screen and (min-width: 1420px){
+
+	.plus{
+        top: 100%;
+    }
+
+}

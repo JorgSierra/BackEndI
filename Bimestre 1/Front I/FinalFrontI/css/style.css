@@ -1,0 +1,387 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&display=swap');
+*{
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+}
+.nobull{
+    list-style-type: none;
+    padding-left: 0;
+}
+.getStarted{
+    background-color: #F3603B;
+    border-radius: 50px;
+    border: 0;
+    padding: 15px 35px;
+    color: white;
+    box-shadow: 0px 4px 8px 0px rgba(242,97,59,0.5);
+    transition: all 0.3s;
+    transition-timing-function: ease-in;
+}
+.getStarted:hover,
+footer .footerNavContainer .group form button:hover{
+    transform: scale(1.05);
+}
+.getStarted:active,
+footer .footerNavContainer .group form button:active{
+    transform: scale(0.95);
+    opacity: .7;
+}
+header{
+    background-image: url(../img/bg-tablet-pattern.svg);
+    background-repeat: no-repeat;
+    background-position: 55vw -200px;
+}
+header nav{
+    margin: 25px;
+    margin-top: 0;
+    padding-top: 25px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+header nav .logo, header nav .navbutton{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+header nav .logo img{
+    width: 146px;
+}
+header nav .nav-links ul{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.3s;
+    transition-timing-function: ease-in;
+}
+header nav .nav-links ul li a{
+    padding: 15px;
+    text-decoration: none;
+    color: #242E52;
+    font-size: .8rem;
+    font-weight: 500;
+}
+header nav .nav-links ul li a:hover{
+    opacity: 0.5;
+}
+header nav .hamburger{
+    display: none;
+}
+
+header .home, main .about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+}
+.home .col{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
+}
+.home .col.info, .about .col.description{
+    padding: 3% 10%;
+}
+.home .col h2{
+    font-size: 3.6rem;
+    font-weight: 700;
+    color: #242E52;
+}
+.home .col p{
+    font-size: 1.04rem;
+    font-weight: 500;
+    color: black;
+    width: 70%;
+}
+.home .col .getStarted{
+    margin: 3% 0;
+}
+.home .col img{
+    width: 100%;
+}
+main{
+    background-image: url(../img/bg-tablet-pattern.svg);
+    background-repeat: no-repeat;
+    background-position: 0 10vw;
+}
+.about .col.description{
+    align-self: start;
+    padding-top: 0;
+}
+.about .description h3{
+    font-weight: 700;
+    color:#242E52;
+    font-size: 2.25rem;
+    margin-top: 0;
+}
+.about .description p{
+    font-size: 1rem;
+    font-weight: 500;
+    color: black;
+    width: 70%;
+}
+
+.about .reasons .reason{
+    display: flex;
+    justify-content: flex-start;
+}
+.about .reason .number{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    width: 10%;
+    background-color: #F3603B;
+    margin: 10px 15px;
+    color: white;
+    height: 40px;
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 0 2.5px;
+}
+.about .reason .text{
+    width: 85%;
+}
+.about .reason .text h4{
+    color: #323851;
+    font-size: 1rem;
+}
+.about .reason .text p{
+    width: 85%;
+    font-size: 1.02rem;
+    color: #B3B2B7;
+}
+.theySaid{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 150px;
+}
+.theySaid h3{
+    text-align: center;
+    margin-top: 50px;
+}
+.theySaid .cardContainer{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.theySaid .cardContainer .card{
+    margin: 60px 10px;
+    background-color: #FAFAFA;
+    width: 430px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+.theySaid .cardContainer .card img{
+    position: absolute;
+    top: 0;
+    width: 80px;
+    transform: translateY(-50%);
+}
+.theySaid .cardContainer .card h4{
+    margin-top: 55px;
+    color: #3F4868;
+    font-weight: 700;
+    font-size: 1rem;
+}
+.theySaid .cardContainer .card p{
+    padding: 0 30px 50px 30px;
+    margin: 0;
+    color: #B9B9C1;
+    font-size: 1rem;
+    font-weight: 500;
+}
+footer .banner{
+    background-color: #F3603B;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 50px;
+    background-image: url(../img/bg-simplify-section-desktop.svg);
+    background-repeat: no-repeat;
+}
+footer .banner h3{
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+}
+footer .banner .getStarted{
+    background-color: white;
+    color: #F3603B;
+}
+footer .footerNavContainer{
+    background-color: #1E1E26;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 70px 2vw;
+}
+footer .footerNavContainer .socialLogo .logo img{
+    width: 146px;
+    padding-bottom: 60px;
+}
+footer .footerNavContainer .socialLogo .social{
+    color: white;
+    font-size: 1.5rem;
+}
+footer .footerNavContainer .socialLogo .social a{
+    color: white;
+    padding: 5px;
+}
+footer .footerNavContainer .socialLogo .social a:hover,
+footer .footerNavContainer .links .nav-links ul li a:hover{
+    color: #F3603B;
+}
+footer .footerNavContainer .links{
+    display: flex;
+    justify-content: space-around;
+}
+footer .footerNavContainer .links .navi{
+    margin-right: 10vw;
+}
+footer .footerNavContainer .links .nav-links ul li{
+    padding: 10px;
+}
+footer .footerNavContainer .links .nav-links ul li a{
+    color: white;
+    font-size: 1rem;
+    font-weight: 400;
+    text-decoration: none;
+}
+footer .footerNavContainer .group form input{
+    width: 201px;
+    height: 45px;
+    border-radius: 50px;
+    border: none;
+    margin-bottom: 1rem;
+    
+}
+footer .footerNavContainer .group form input:valid{
+    color: green;
+}
+footer .footerNavContainer .group form input:invalid{
+    color: red;
+}
+footer .footerNavContainer .group form button{
+    background-color: #F3603B;
+    width: 65px;
+    height: 45px;
+    border-radius: 50px;
+    border: none;
+    margin-bottom: 60px;
+    color: white;
+    transition: all 0.3s;
+    transition-timing-function: ease-in;
+}
+footer .footerNavContainer .group p{
+    font-size: .78rem;
+    color: #8C8C94;
+    margin: 0;
+}
+
+@media only screen and (max-width: 800px){
+    header nav{
+        padding: 40px 5vw 0 5vw;
+        justify-content: space-between;
+    }
+    header nav .hamburger{
+        display: block;
+    }
+    header nav .navbutton, header nav .nav-links ul{
+        display: none;
+    }
+    header .home, main .about{
+        flex-direction: column;
+    }
+    .home .col{
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        width: 50%;
+    }
+    .home .col.info{
+        order: 2
+    }
+    .home .col.info h2,
+    .home .col.info p{
+        width: 85vw;
+    }
+    .home .col img{
+        padding-top: 50px;
+        width: 80vw;
+    }
+    .about .col.description{
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 50px;
+    }
+    .about .description p{
+        width: 90%;
+    }
+    .about .reason .text p{
+        width: 95%;
+    }
+    .theySaid .cardContainer .card{
+        width: 85%;
+    }
+    footer .footerNavContainer{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        
+    }
+    footer .footerNavContainer .socialLogo::after{
+        content: "Copyright 2022. All Rights Reserved";
+        color: #B3B2B7;
+        font-size: .78rem;
+    }
+    footer .banner{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        text-align: center;
+        padding: 40px;
+    }
+    footer .banner h3{
+        margin: 0 0 1rem 0;
+    }
+    footer .footerNavContainer .socialLogo{
+        display: flex;
+        flex-direction: column;
+        order: 3;
+        align-items: center;
+    }
+    footer .footerNavContainer .socialLogo .logo img{
+        width: 180px;
+        padding-bottom: 1rem;
+    }
+    footer .footerNavContainer .socialLogo .social{
+        font-size: 2rem;
+        padding-bottom: 1rem;
+        order: -1;
+    }
+    footer .footerNavContainer .links{
+        order: 2;
+        padding-bottom: 1rem;
+    }
+    footer .footerNavContainer .group{
+        order: 1;
+    }
+    footer .footerNavContainer .group form button{
+        margin-bottom: 1rem;
+    }
+
+    footer .footerNavContainer .group p{
+        display: none;
+    }
+}

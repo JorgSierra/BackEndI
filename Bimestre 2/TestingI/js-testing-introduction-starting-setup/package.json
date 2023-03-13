@@ -1,0 +1,17 @@
+{
+  "name": "js-testing-introduction-starting-setup",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest --env=jsdom",
+    "test:coverage": "jest --coverage --env=jsdom --watchAll"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.0.3",
+    "jest-environment-jsdom": "^29.1.1"
+  }
+}
